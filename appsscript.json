@@ -1,0 +1,26 @@
+{
+  "timeZone": "Asia/Kolkata",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "addOns": {
+    "common": {
+      "name": "RemotePC Conferencing",
+      "logoUrl": "https://png.pngtree.com/element_our/png/20181229/vector-chat-icon-png_302635.jpg",
+      "layoutProperties": {
+        "primaryColor": "#4285F4"
+      }
+    },
+    "conferenceSolution": {
+      "conferenceSolutionKey": {
+        "type": "REMOTE_PC"
+      },
+      "name": "RemotePC Session",
+      "logoUrl": "https://png.pngtree.com/element_our/png/20181229/vector-chat-icon-png_302635.jpg",
+      "createRequestUrl": "https://remotepc-meet-backend.onrender.com/createConference" 
+    }
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/calendar.addons.execute",
+    "https://www.googleapis.com/auth/calendar.events"
+  ]
+}
