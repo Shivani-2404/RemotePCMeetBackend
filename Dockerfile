@@ -1,17 +1,16 @@
-# Base image with runtime
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
+# Stage 1: Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
-EXPOSE 80
 
-# Build image with SDK
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
-WORKDIR /src
-COPY . .
+COPY *.csproj ./
 RUN dotnet restore
-RUN dotnet publish -c Release -o /app/publish
 
-# Final image
-FROM base AS final
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Stage 2: Run
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
-COPY --from=build /app/publish .
+COPY --from=build /app/out .
+
 ENTRYPOINT ["dotnet", "RemotePCMeetBackend.dll"]
