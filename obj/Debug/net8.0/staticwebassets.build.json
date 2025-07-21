@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ss5N9EMM8N9ykJPriYwfxMuQ4KiMrGsLTl4oOYibLtA=",
+  "Source": "RemotePCMeetBackend",
+  "BasePath": "_content/RemotePCMeetBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

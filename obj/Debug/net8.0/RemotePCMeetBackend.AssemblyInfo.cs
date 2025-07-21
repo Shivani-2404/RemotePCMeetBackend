@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RemotePCMeetBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f3f9620c17300dd14aee294d888382d9f34389d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3781c2cb1b0df34912b491a67bc7c86efab74448")]
 [assembly: System.Reflection.AssemblyProductAttribute("RemotePCMeetBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RemotePCMeetBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

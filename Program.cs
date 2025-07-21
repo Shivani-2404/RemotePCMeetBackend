@@ -6,11 +6,12 @@ app.MapGet("/", () => "RemotePC Add-on API is running.");
 // Google Meet Add-on expects a POST to this endpoint
 app.MapPost("/createConference", async (HttpContext context) =>
 {
-    // Parse incoming JSON request (if needed)
+    context.Response.Headers.Add("Access-Control-Allow-Origin", "*");
+    context.Response.ContentType = "application/json";
+
     using var reader = new StreamReader(context.Request.Body);
     var body = await reader.ReadToEndAsync();
 
-    // Here you build the JSON response that Google Meet expects
     var response = new
     {
         conferenceSolution = new
@@ -30,7 +31,6 @@ app.MapPost("/createConference", async (HttpContext context) =>
         }
     };
 
-    context.Response.ContentType = "application/json";
     await context.Response.WriteAsJsonAsync(response);
 });
 
